@@ -8,6 +8,6 @@ namespace RelatoriosVendasMVC.Models
     public class Departamento
     {
         public int Id { get; set; }
-        public int Nome { get; set; }
+        public String Nome { get; set; }
     }
 }

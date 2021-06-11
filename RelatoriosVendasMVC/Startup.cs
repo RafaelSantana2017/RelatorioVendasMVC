@@ -37,7 +37,8 @@ namespace RelatoriosVendasMVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<RelatoriosVendasMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("RelatoriosVendasMVCContext")));
+                 options.UseMySql(Configuration.GetConnectionString("RelatoriosVendasMVCContext"),
+                        builder => builder.MigrationsAssembly("RelatoriosVendasMVC")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

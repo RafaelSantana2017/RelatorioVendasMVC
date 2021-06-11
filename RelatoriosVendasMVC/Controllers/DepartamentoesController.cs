@@ -21,7 +21,7 @@ namespace RelatoriosVendasMVC.Controllers
 
         // GET: Departamentoes
         public async Task<IActionResult> Index()
-        {
+        {   
             return View(await _context.Departamento.ToListAsync());
         }
 
