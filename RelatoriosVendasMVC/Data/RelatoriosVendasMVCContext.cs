@@ -14,6 +14,8 @@ namespace RelatoriosVendasMVC.Data
         {
         }
 
-        public DbSet<RelatoriosVendasMVC.Models.Departamento> Departamento { get; set; }
+        public DbSet<Departamento> Departamento { get; set; }
+        public DbSet<Vendedor> Vendedor { get; set; }
+        public DbSet<Vendas> Vendas { get; set; }
     }
 }

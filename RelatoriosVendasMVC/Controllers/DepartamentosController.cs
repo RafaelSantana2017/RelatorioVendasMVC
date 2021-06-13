@@ -10,11 +10,11 @@ using RelatoriosVendasMVC.Models;
 
 namespace RelatoriosVendasMVC.Controllers
 {
-    public class DepartamentoesController : Controller
+    public class DepartamentosController : Controller
     {
         private readonly RelatoriosVendasMVCContext _context;
 
-        public DepartamentoesController(RelatoriosVendasMVCContext context)
+        public DepartamentosController(RelatoriosVendasMVCContext context)
         {
             _context = context;
         }
