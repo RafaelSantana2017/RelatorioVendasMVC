@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelatoriosVendasMVC.Data;
 
 namespace RelatoriosVendasMVC.Migrations
 {
     [DbContext(typeof(RelatoriosVendasMVCContext))]
-    partial class RelatoriosVendasMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20210613184759_TesteInicial")]
+    partial class TesteInicial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace RelatoriosVendasMVC.Migrations
 
                     b.Property<DateTime>("Aniversario");
 
-                    b.Property<int>("DepartamentoId");
+                    b.Property<int?>("DepartamentoId");
 
                     b.Property<string>("Email");
 
@@ -80,8 +82,7 @@ namespace RelatoriosVendasMVC.Migrations
                 {
                     b.HasOne("RelatoriosVendasMVC.Models.Departamento", "Departamento")
                         .WithMany("Vendedores")
-                        .HasForeignKey("DepartamentoId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("DepartamentoId");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,6 +14,7 @@ namespace RelatoriosVendasMVC.Models
         public double SalarioBase { get; set; }
         public DateTime Aniversario { get; set; }
         public Departamento Departamento { get; set; }
+        public int DepartamentoId { get; set; }
         public ICollection<Vendas> Vendas { get; set; } = new List<Vendas>();
 
 
@@ -48,6 +49,8 @@ namespace RelatoriosVendasMVC.Models
 
             return Vendas.Where(vd => vd.Data >= inicial && vd.Data <= final).Sum(vd => vd.Quantidade);
         }
+
+       
     }
 
 

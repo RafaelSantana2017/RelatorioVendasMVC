@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RelatoriosVendasMVC.Data;
 
+
 namespace RelatoriosVendasMVC
 {
     public class Startup
@@ -39,6 +40,8 @@ namespace RelatoriosVendasMVC
             services.AddDbContext<RelatoriosVendasMVCContext>(options =>
                  options.UseMySql(Configuration.GetConnectionString("RelatoriosVendasMVCContext"),
                         builder => builder.MigrationsAssembly("RelatoriosVendasMVC")));
+
+                
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
