@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using RelatoriosVendasMVC.Data;
 
 
+
 namespace RelatoriosVendasMVC
 {
     public class Startup

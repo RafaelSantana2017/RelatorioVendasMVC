@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,10 +10,20 @@ namespace RelatoriosVendasMVC.Models
     {
 
         public int Id { get; set; }
+        [Required(ErrorMessage = "{0} obrigatório.")]
         public string Nome { get; set; }
+        [Required(ErrorMessage = "{0} obrigatório.")]
+        [EmailAddress(ErrorMessage ="Coloque um e-mail valido!")]
         public string Email { get; set; }
+
+        [Display(Name = "Salario")]
+        [Required(ErrorMessage = "{0} obrigatório.")]
         public double SalarioBase { get; set; }
+
+        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "{0} obrigatório.")]
         public DateTime Aniversario { get; set; }
+        
         public Departamento Departamento { get; set; }
         public int DepartamentoId { get; set; }
         public ICollection<Vendas> Vendas { get; set; } = new List<Vendas>();
